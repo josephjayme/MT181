@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MyIIT</title>
+</head>
+<script> src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript">
+        function AjaxCall() {
+        $.ajax(
+        {
+            type: 'POST',
+            contentType: "application/json; charset=utf-8",
+            url: 'Default.aspx/server',
+            datatype: 'json',
+            success: function (result) { alert(result.d); }
+        })
+
+    }
+    </script>
+<body>
+
+<form method="post">
+    <div id="main">
+        <label>Username</label>
+        <input type="text" placeholder="Enter username" name="uname" required>
+
+        <label><br>Password</label>
+        <input type="password" placeholder="Enter password" name="psw" required>
+
+        <button type="submit">Login</button>
+    </div>
+</form>
+</body>
+</html>
